@@ -19,6 +19,7 @@ func newAppWihConfig(cfg config.Configuration) *fx.App {
 	options := []fx.Option{
 		fx.Provide(func() config.Configuration { return cfg }),
 		internalModule,
+		coursesModule,
 	}
 
 	return fx.New(
